@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout>
+    <data>
+        <variable
+            name="user"
+            type="com.example.sahibinden.User" />
+
+    </data>
+
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AdvertActivity">
+
+    <TextView
+        android:id="@+id/ad"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@{user.name}"/>
+    <TextView
+        app:layout_constraintTop_toBottomOf="@id/ad"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginBottom="10dp"
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@{user.surname}"/>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/clArea"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#195C90"
+        android:padding="6dp"
+        app:layout_constraintTop_toTopOf="parent">
+
+
+        <ImageView
+            android:id="@+id/ivBackArrow"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:src="@drawable/backarrow"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tvAdvertDetail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="İlan Detayı"
+            android:textColor="@color/white"
+            android:textSize="25sp"
+            app:layout_constraintBottom_toBottomOf="@id/ivBackArrow"
+            app:layout_constraintEnd_toStartOf="@id/ivStar"
+            app:layout_constraintStart_toEndOf="@id/ivBackArrow"
+            app:layout_constraintTop_toTopOf="@id/ivBackArrow" />
+
+        <ImageView
+            android:id="@+id/ivShare"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/share"
+            app:layout_constraintBottom_toBottomOf="@id/tvAdvertDetail"
+            app:layout_constraintRight_toLeftOf="@id/ivStar"
+            app:layout_constraintTop_toTopOf="@id/tvAdvertDetail"
+            android:layout_marginRight="10dp"/>
+        
+        <ImageView
+            android:id="@+id/ivStar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/star"
+            app:layout_constraintBottom_toBottomOf="@id/tvAdvertDetail"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/tvAdvertDetail" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <TextView
+
+        android:id="@+id/tvAdvertTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="GAYRİMENKUL'DEN DENİZ MANZARALI HAVUZLU 6 KİŞİLİK LUX VİLLA"
+        android:textAlignment="center"
+        app:layout_constraintTop_toBottomOf="@+id/clArea"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginTop="5dp"/>
+
+    <ImageView
+        android:id="@+id/ivAdvertPicture"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:layout_marginHorizontal="10dp"
+        android:layout_marginTop="5dp"
+        app:layout_constraintTop_toBottomOf="@+id/tvAdvertTitle"
+        android:src="@drawable/house"
+        android:scaleType="centerCrop"/>
+
+    <TextView
+        android:id="@+id/tvAdvertOwner"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="ÖZSOY GAYRİMENKUL "
+        android:textAlignment="center"
+        android:textColor="#2196F3"
+        android:textStyle="bold"
+        android:textSize="12sp"
+        app:layout_constraintTop_toBottomOf="@+id/ivAdvertPicture"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginTop="5dp"/>
+
+    <TextView
+        android:id="@+id/tvAdvertCate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Emlak>Konut>Satılık>Villa "
+        android:textAlignment="center"
+        android:textColor="#2196F3"
+        android:textSize="12sp"
+        app:layout_constraintTop_toBottomOf="@+id/tvAdvertOwner"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginTop="5dp"/>
+
+    <TextView
+        android:id="@+id/tvAdvertCity"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Muğla,Datça,Ovabükü Mah. "
+        android:textAlignment="center"
+        android:textColor="#020405"
+        android:textSize="12sp"
+        app:layout_constraintTop_toBottomOf="@+id/tvAdvertCate"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginTop="5dp"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+    </layout>
+

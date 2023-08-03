@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/clArea"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#195C90"
+        android:padding="10dp"
+        app:layout_constraintTop_toTopOf="parent">
+
+
+        <ImageView
+            android:id="@+id/ivSahibindenIcon"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/iconsahibinden"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tvSearch"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Arama"
+            android:textColor="@color/white"
+            android:textSize="25sp"
+            app:layout_constraintBottom_toBottomOf="@id/ivSahibindenIcon"
+            app:layout_constraintEnd_toStartOf="@id/ivCarIcon"
+            app:layout_constraintStart_toEndOf="@id/ivSahibindenIcon"
+            app:layout_constraintTop_toTopOf="@id/ivSahibindenIcon" />
+
+        <ImageView
+            android:id="@+id/ivCarIcon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/icon_car_camera"
+            app:layout_constraintBottom_toBottomOf="@id/tvSearch"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/tvSearch" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <EditText
+        android:id="@+id/etSearch"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_margin="10dp"
+        android:background="#F2F2F2"
+        android:drawableStart="@drawable/search"
+        android:drawableEnd="@drawable/microfone"
+        android:hint="Kelime veya ilan No. ile ara"
+        android:padding="5dp"
+        app:layout_constraintTop_toBottomOf="@id/clArea" />
+
+
+    <View
+        android:id="@+id/vLine"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_marginTop="2dp"
+        app:layout_constraintTop_toBottomOf="@id/etSearch" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvCategories"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="10dp"
+        android:orientation="vertical"
+        app:layout_constraintTop_toBottomOf="@id/vLine"
+        tools:listitem="@layout/categories_list_item"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+

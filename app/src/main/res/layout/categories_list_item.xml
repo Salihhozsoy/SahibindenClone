@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+<de.hdodenhof.circleimageview.CircleImageView
+    android:id="@+id/ivCategoryIcon"
+    android:layout_width="40sp"
+    android:layout_height="40sp"
+    android:src="@drawable/user2"
+    app:layout_constraintTop_toTopOf="parent"
+    app:layout_constraintLeft_toLeftOf="parent"
+    android:layout_margin="20dp"
+    android:scaleType="centerCrop"/>
+
+    <TextView
+        android:id="@+id/tvCategoryName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Emlak"
+        android:textStyle="bold"
+        android:textSize="15dp"
+        app:layout_constraintTop_toTopOf="@id/ivCategoryIcon"
+        app:layout_constraintLeft_toRightOf="@id/ivCategoryIcon"
+        android:layout_marginLeft="20dp"/>
+
+    <TextView
+        android:id="@+id/tvCategoryText"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/tvCategoryName"
+        app:layout_constraintLeft_toLeftOf="@id/tvCategoryName"
+        app:layout_constraintRight_toLeftOf="@+id/ivForwardIcon"
+        android:text="adsadadadasdasdadacadaeacagvafdsdfsdfsfsfsddfsdfsfsada"
+        android:maxLines="1"
+        android:ellipsize="end"/>
+<ImageView
+    android:id="@+id/ivForwardIcon"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:src="@drawable/forwardarrow"
+    app:layout_constraintTop_toTopOf="@id/ivCategoryIcon"
+    app:layout_constraintBottom_toBottomOf="@id/ivCategoryIcon"
+    app:layout_constraintRight_toRightOf="parent"/>
+
+
+    <View
+        android:id="@+id/vLine"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_marginTop="2dp"
+        app:layout_constraintTop_toBottomOf="@id/ivCategoryIcon" />
+</androidx.constraintlayout.widget.ConstraintLayout>
